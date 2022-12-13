@@ -6,5 +6,11 @@
 
 int main()
 {
-    
+    int B[9][9], N;
+    printf("                        BLACKBOX\n");
+    printf("                   CREATIVE COMPUTING\n");
+    printf("                 MORRISTOWN, NEW JERSEY\n");
+    printf("NO. OF ATOMS? ");
+    scanf("%d", &N);
+    return 0; 
 }
