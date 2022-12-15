@@ -15,6 +15,7 @@ int main()
     printf("                        BLACKBOX\n");
     printf("                   CREATIVE COMPUTING\n");
     printf("                 MORRISTOWN, NEW JERSEY\n");
+    goto n580;
     printf("NO. OF ATOMS? ");
     scanf("%d", &N);
 
@@ -35,7 +36,7 @@ int main()
             B[x][y] = 1;
         }
     }
-
+    
     int s = 0, c = 0;
     printf("\nRAY ");
     scanf("%d", &R);
@@ -44,5 +45,27 @@ int main()
     {
 
     }
+    n180:
+    n210:
+    n240:
+    n250:
+    n260:
+    n270:
+    n280:
+    n310:
+    n330:
+    n340:
+    n350:
+    n360:
+    n380:
+    n400:
+    n420:
+    n430:
+    n440:
+    n450:
+    n460:
+    n480:
+    n540:
+    n580:
     return 0; 
 }
