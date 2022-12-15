@@ -6,7 +6,7 @@
 
 int FNR(int Z)
 {
-    (int)(8 * rand(1) + 1);
+    Z = (8 * rnd(1) + 1);
 }
 
 int main()
@@ -22,10 +22,12 @@ int main()
     {0, 0, 0, 0, 0, 0, 0, 0},
     {0, 0, 0, 0, 0, 0, 0, 0},
     };
-    int N, R;
+    
+    int N, R, x, y;
     printf("                        BLACKBOX\n");
     printf("                   CREATIVE COMPUTING\n");
     printf("                 MORRISTOWN, NEW JERSEY\n");
+
 n150:
     printf("NO. OF ATOMS? ");
     scanf("%d", &N);
@@ -40,12 +42,9 @@ n150:
     for (int i = 1; i < N;i++)
     {
         n180:
-        int x = FNR(1);
-        int y = FNR(1);
-        if (B[x][y] == 0)
-        {
-            goto n180;
-        }
+        x = FNR(1);
+        y = FNR(1);
+        if (B[x][y] != 0) goto n180;
         B[x][y] = 1;
     }
 
@@ -54,11 +53,7 @@ n150:
 n210:
     printf("\nRAY ");
     scanf("%d", &R);
-
-    if (R < 1)
-    {
-        goto n480;
-    }
+    if (R < 1) goto n480;
 
 n240:
 
@@ -93,12 +88,52 @@ n440:
 n450:
 
 n460:
+    if (Z == R)
+    {
+        printf("REFLECTED");
+        s = s + 1;
+        goto n210;
+    }
 
 n480:
+    printf("NOW TELL ME, WHERE DO YOU THINK THE ATOMS ARE?\n");
+    printf("IN ROW,COLUMN FORMAT PLEASE.\n");
+    for(int q = 1;q < N;q++)
+    {
+        printf("ATOM # ");
+        printf("%d",&q);
+        int ii, jj;
+        scanf("%d%d", &ii, &jj);
+        if (B[jj][ii] != 1)
+        {
+            s = s + 5;
+        }
+        B[jj][ii] = 2;
+        c = c + 1;
+    }
 
-n540:
-
-n580:
-
+    for(int j = 1;j < 8;j++)
+    {
+        for(int i = 1;i < 8;i++)
+        {
+            if(B[i][j] = 0)
+            {
+                printf(" .");
+            }
+            printf(" *");
+        }
+    }
+    printf(" YOU GUESSED ");
+    printf("%d",&c);
+    printf(" OUT OF ");
+    printf("%d",&N);
+    printf(" ATOMS CORRECTLY!!\n");
+    printf(" YOUR SCORE FOR THIS ROUND WAS");
+    printf("%d",&s);
+    printf(" POINTS.");
+    printf(" CARE TO TRY AGAIN");
+    char * A;
+    scanf("%s", &A);
+    if (A == "Y") goto n150;
     return 0; 
 }
