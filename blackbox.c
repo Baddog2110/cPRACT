@@ -187,7 +187,7 @@ n480:
     {
         for(int i = 1;i < 8;i++)
         {
-            if(b[i][j] = 0)
+            if(b[i][j] == 0)
             {
                 printf(" .");
             }
