@@ -78,14 +78,28 @@ n210:
         }
         y2 = y1 - 1, y3 = y1 + 1, x2 = x1, x3 = x1;
     n310:
-
-
-
-
-
-        printf("ABSORBED\n");
-        s=s+1;
-        goto n210;
+        if(8*b[x1][y1]+b[x2][y2]+2*b[x3][y3] <= 330)
+        {
+            goto n330;
+        }
+        else if(8*b[x1][y1]+b[x2][y2]+2*b[x3][y3] <= 340)
+        {
+            goto n340;
+        }
+        else if(8*b[x1][y1]+b[x2][y2]+2*b[x3][y3] <= 350)
+        {
+            goto n350;
+        }
+        else if(8*b[x1][y1]+b[x2][y2]+2*b[x3][y3] <= 340)
+        {
+            goto n340;
+        }
+        else
+        {
+            printf("ABSORBED\n");
+            s=s+1;
+            goto n210;
+        }
     n330:
         x = x1, y = y1;
         goto n380;
@@ -102,9 +116,33 @@ n210:
         }
         u - 0, v = z;
     n380:
-
+        if((x+15)/8 <= 420)
+        {
+            goto n420;
+        }
+        else if((x+15)/8 <= 400)
+        {
+            goto n400;
+        }
+        else if((x+15)/8 <= 430)
+        {
+            goto n430;
+        }
+        else break;
     n400:
-
+        if((y+15)/8 <= 440)
+        {
+            goto n440;
+        }
+        else if((y+15)/8 <= 280)
+        {
+            goto n280;
+        }
+        else if((y+15)/8 <= 450)
+        {
+            goto n450;
+        }
+        else break;
     n420:
         z = y;
         goto n460;
@@ -129,11 +167,12 @@ n210:
     }
 n480:
     printf("NOW TELL ME, WHERE DO YOU THINK THE ATOMS ARE?\n");
-    printf("IN ROW,COLUMN FORMAT PLEASE.\n");
+    printf("IN ROW,COLUMN FORMAT PLEASE. \n");
     for(int q = 1;q < n;q++)
     {
         printf("ATOM # ");
         printf("%d",&q);
+        printf(" ");
         int ii, jj;
         scanf("%d%d", &ii, &jj);
         if (b[jj][ii] != 1)
@@ -143,6 +182,7 @@ n480:
         b[jj][ii] = 2;
         c = c + 1;
     }
+    printf("\n");
     for(int j = 1;j < 8;j++)
     {
         for(int i = 1;i < 8;i++)
@@ -153,16 +193,17 @@ n480:
             }
             printf(" *");
         }
+        printf("\n");
     }
     printf(" YOU GUESSED ");
     printf("%d",&c);
     printf(" OUT OF ");
     printf("%d",&n);
     printf(" ATOMS CORRECTLY!!\n");
-    printf(" YOUR SCORE FOR THIS ROUND WAS");
+    printf(" YOUR SCORE FOR THIS ROUND WAS ");
     printf("%d",&s);
-    printf(" POINTS.");
-    printf(" CARE TO TRY AGAIN");
+    printf(" POINTS.\n");
+    printf(" CARE TO TRY AGAIN ");
     char * a;
     scanf("%s", &a);
     if (a == "Y") goto n150;
