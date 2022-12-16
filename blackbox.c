@@ -162,16 +162,16 @@ n210:
             goto n210;
         }
         printf("TO\n");
-        printf("%d", &z);
+        printf("%d",z);
         goto n210;
     }
 n480:
     printf("NOW TELL ME, WHERE DO YOU THINK THE ATOMS ARE?\n");
-    printf("IN ROW,COLUMN FORMAT PLEASE. \n");
+    printf("IN ROW,COLUMN FORMAT PLEASE.\n");
     for(int q = 1;q < n;q++)
     {
         printf("ATOM # ");
-        printf("%d",&q);
+        printf("%d",q);
         printf(" ");
         int ii, jj;
         scanf("%d%d", &ii, &jj);
@@ -196,16 +196,16 @@ n480:
         printf("\n");
     }
     printf(" YOU GUESSED ");
-    printf("%d",&c);
+    printf("%d",c);
     printf(" OUT OF ");
-    printf("%d",&n);
+    printf("%d",n);
     printf(" ATOMS CORRECTLY!!\n");
-    printf(" YOUR SCORE FOR THIS ROUND WAS ");
-    printf("%d",&s);
-    printf(" POINTS.\n");
-    printf(" CARE TO TRY AGAIN ");
+    printf(" YOUR SCORE FOR THIS ROUND WAS");
+    printf("%d",s);
+    printf(" POINTS.");
+    printf(" CARE TO TRY AGAIN");
     char * a;
-    scanf("%s", &a);
+    scanf("%s", a);
     if (a == "Y") goto n150;
     return 0;
 }
