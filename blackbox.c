@@ -3,7 +3,6 @@
 #include <stdint.h>
 #include <math.h>
 #include <stdlib.h>
-
 int main()
 {
     int b[8][8];
@@ -33,7 +32,7 @@ n150:
         b[x][y] = 1;
     }
 n210:
-    printf("\nRAY ");
+    printf("RAY ");
     scanf("%d", &r);  
     while (r > 0)
     {
