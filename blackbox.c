@@ -181,7 +181,7 @@ n480:
         b[jj][ii] = 2;
         c = c + 1;
     n540:
-        printf("\n");
+        if(1 > 2) printf(" ");
     }
     printf("\n");
     for(int j = 0;j < 8;j++)
