@@ -9,6 +9,8 @@ int main()
     int b[9][9];
     int n = 0, r = 0, x = 0, y = 0, x1 = 0, x2 = 0, x3 = 0, ii = 0, jj = 0;
     int s = 0, c = 0, y1 = 0, y2 = 0, y3 = 0, u = 0, v = 0, z = 0;
+    char a[10];
+    char aa[] = "y";
     printf("                        BLACKBOX\n");
     printf("                   CREATIVE COMPUTING\n");
     printf("                 MORRISTOWN, NEW JERSEY\n");
@@ -209,8 +211,6 @@ n480:
     printf("%d",s);
     printf(" POINTS.");
     printf("\n CARE TO TRY AGAIN (y/no) ");
-    char a[10];
-    char aa[] = "y";
     scanf("%s", a);
     if (strcmp(a, aa) == 0) 
     {
